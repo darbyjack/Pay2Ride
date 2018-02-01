@@ -1,0 +1,10 @@
+name: Pay2Ride
+version: @version@
+main: me.glaremasters.pay2ride.Pay2Ride
+authors: [blockslayer22]
+description: Ride stuff
+
+commands:
+  p2w:
+    description: Default help info
+
