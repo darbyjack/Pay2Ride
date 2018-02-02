@@ -2,9 +2,10 @@ name: Pay2Ride
 version: @version@
 main: me.glaremasters.pay2ride.Pay2Ride
 authors: [blockslayer22]
+depend: [Vault]
 description: Ride stuff
 
 commands:
-  p2w:
+  p2r:
     description: Default help info
 

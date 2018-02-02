@@ -46,7 +46,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter, IHandler {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
             String[] args) {
 
-        if (!cmd.getName().equalsIgnoreCase("p2w")) {
+        if (!cmd.getName().equalsIgnoreCase("p2r")) {
             return true;
         }
 
@@ -118,7 +118,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter, IHandler {
     @Override
     public List<String> onTabComplete(CommandSender sender, Command cmd, String commandLabel,
             String[] args) {
-        if (cmd.getName().equalsIgnoreCase("p2w")) {
+        if (cmd.getName().equalsIgnoreCase("p2r")) {
             if (args.length == 1) {
                 List<String> commandNames = new ArrayList<>();
 

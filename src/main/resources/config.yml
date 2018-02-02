@@ -1,2 +1,10 @@
-duration:
-price:
+plugin-prefix: "&b[&7Pay2Ride&b]"
+
+messages:
+  pay: "You can now mount for X seconds!"
+  pay-first: "You must pay first by doing /p2r pay"
+  paycommand: "/p2r pay"
+  not-enough-money: "Sorry, you don't have enough money!"
+
+duration: 60
+price: 20.00
