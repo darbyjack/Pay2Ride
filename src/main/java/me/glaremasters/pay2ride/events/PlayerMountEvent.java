@@ -29,27 +29,4 @@ public class PlayerMountEvent implements Listener {
         }
 
     }
-
-    @EventHandler
-    public void onPlayerMove(PlayerMoveEvent event) {
-        Player player = event.getPlayer();
-
-        if (!player.isInsideVehicle()) {
-            return;
-        }
-
-        if (player.isInsideVehicle()) {
-            if (Pay2Ride.getAllowedMount().containsKey(player.getName())) {
-                Location loc = player.getVehicle().getLocation();
-                Bukkit.broadcastMessage(loc.toString());
-                player.getVehicle().leaveVehicle();
-                Bukkit.broadcastMessage("Leaving Vehicle");
-                player.teleport(loc);
-                Bukkit.broadcastMessage("Teleporting player");
-            }
-        }
-
-    }
-
-
 }

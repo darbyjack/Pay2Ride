@@ -61,6 +61,9 @@ public class Pay2Ride extends JavaPlugin {
     @Override
     public void onDisable() {
         commandHandler.disable();
+        if (getAllowedMount().size() > 0) {
+            getAllowedMount().clear();
+        }
     }
 
     public static String getPrefix() {

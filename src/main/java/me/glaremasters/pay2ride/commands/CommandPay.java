@@ -33,9 +33,12 @@ public class CommandPay extends CommandBase {
             player.sendMessage(ColorUtil.color(config.getString("messages.pay")));
             HashMap<String, Long> allowedMount = Pay2Ride.getAllowedMount();
             allowedMount.put(player.getName(), System.currentTimeMillis());
-            Bukkit.getServer().getScheduler()
-                    .runTaskLater(Pay2Ride.getI(), () -> allowedMount.remove(player.getName()),
-                            duration * 20);
+            Bukkit.getServer().getScheduler().runTaskLater(Pay2Ride.getI(), () -> {
+                allowedMount.remove(player.getName());
+                if (player.getVehicle() != null) {
+                    player.leaveVehicle();
+                }
+            }, duration * 20);
             return;
         }
         player.sendMessage(ColorUtil.color(config.getString("message.not-enough-money")));
